@@ -1,0 +1,273 @@
+.home {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  color: black;
+}
+.home__content {
+  padding: 9rem 2% 4rem 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home .logo {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+}
+.home .logo img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 100px;
+}
+
+.home__content h1 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin: auto;
+  text-align: center;
+}
+.home__content h1 span {
+  color: #5277f0;
+}
+
+.home__box {
+  max-width: 450px;
+  padding: 25px 25px 3rem 25px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 #dddddd, 0 6px 20px 0 #ddddddea;
+  border: 1px solid #ddddddea;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.home__box h3,
+.model__content h3 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.home__box .myUserID {
+  margin: 20px 0;
+  padding: 15px;
+  border: 2px dashed #5277f0;
+  border-radius: 12px;
+  position: relative;
+}
+.home__box .copyIcon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #5f5f5f;
+  cursor: pointer;
+}
+.home__box .copyIcon:hover {
+  color: black;
+}
+
+.home__box .myUserID span {
+  line-height: 1.4rem;
+  color: #5277f0;
+  word-break: break-all;
+  font-size: 1.1rem;
+}
+
+.home input {
+  padding: 18px;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  line-height: 1;
+  background-color: #eeeeee;
+  margin-bottom: 20px;
+}
+
+.home button {
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  background-color: #5277f0;
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.1rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.home button:hover {
+  background-color: #345de2;
+}
+.home button .MuiSvgIcon-root {
+  font-size: inherit;
+}
+.video__box .home__callOptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video__box .home__callOption {
+  background-color: #5277f0;
+  width: 50px;
+  height: 50px;
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.video__box .home__callOption > .MuiSvgIcon-root {
+  color: white;
+}
+
+.home .video__box {
+  position: relative;
+  overflow: hidden;
+  max-height: 200px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.video__box .home__callOptions {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+}
+
+.home__box .generating__id {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@-webkit-keyframes modelAnimation {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes modelAnimation {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.model {
+  position: fixed;
+  background-color: #000000e6;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.model .model__content {
+  padding: 2rem 20px;
+  border-radius: 6px;
+  background-color: white;
+  -webkit-animation: modelAnimation 0.6s;
+  animation: modelAnimation 0.6s;
+  max-width: 450px;
+  width: 100%;
+  margin: 15px;
+}
+
+.model__content h3 {
+  margin-bottom: 20px;
+}
+.model__content h3 span {
+  color: #5277f0;
+}
+
+.model__content p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@-webkit-keyframes notification-animation {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 4%;
+  }
+}
+@keyframes notification-animation {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 4%;
+  }
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 4%;
+  z-index: 999;
+  background-color: #000000e6;
+  color: white;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 6px;
+  -webkit-animation: notification-animation 0.5s;
+  animation: notification-animation 0.5s;
+}
+
+@media screen and (max-width: 800px) {
+  .home .logo img {
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .notification {
+    max-width: 290px;
+  }
+  .home .logo img {
+    width: 80px;
+  }
+  .home__box {
+    padding: 5% 5% 2.5rem 5%;
+  }
+  .home__content {
+    padding: 7rem 2% 4rem 2%;
+  }
+  .model .model__content {
+    min-width: 280px;
+  }
+  .home__box .myUserID span {
+    font-size: 1rem;
+  }
+  .video__box .home__callOption {
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -1,0 +1,59 @@
+.video {
+  background-color: #1b1b1b;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.fullScreen video {
+  width: 100vw;
+  height: 100vh;
+}
+.fullScreen {
+  width: 100vw;
+  height: 100vh;
+}
+.video__stopped {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+}
+
+.video__user {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  font-size: 0.9rem;
+  background-color: #000000cc;
+  border-top-right-radius: 4px;
+  padding: 5px;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  max-width: 90%;
+}
+.video__user .MuiSvgIcon-root {
+  color: red;
+  margin-right: 5px;
+}
+.video__user .video__info {
+  margin-right: 5px;
+}
+.video__userName {
+  padding: 4px;
+}
+.video__userID {
+  margin: 5px 0;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.2rem;
+}

@@ -1,0 +1,114 @@
+@-webkit-keyframes callAnimation {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes callAnimation {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes call-animation {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 4%;
+  }
+}
+
+@keyframes call-animation {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 4%;
+  }
+}
+
+.callUI {
+  position: fixed;
+  top: 40px;
+  right: 4%;
+  padding: 20px;
+  z-index: 999;
+  border-radius: 8px;
+  background-color: #000000e6;
+  color: white;
+  font-size: 0.9rem;
+  max-width: 380px;
+  width: 380px;
+}
+.call__incomingCall {
+  -webkit-animation: callAnimation 0.6s infinite, call-animation 0.5s;
+  animation: callAnimation 0.6s infinite, call-animation 0.5s;
+}
+.call__outgoingCall {
+  -webkit-animation: call-animation 0.5s;
+  animation: call-animation 0.5s;
+}
+
+.call__options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call__option {
+  background-color: #5277f0;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.callUI .call__end {
+  background-color: #ff0000;
+}
+.callUI .call__answer {
+  background-color: #10af10;
+}
+.call__user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.call__userID {
+  margin: 5px 0;
+  line-height: 1.2rem;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.call__info {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.callUI .call__option > .MuiSvgIcon-root {
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+  .callUI {
+    max-width: 90%;
+    width: 90%;
+    min-width: 290px;
+  }
+  .call__option {
+    width: 48px;
+    height: 48px;
+    margin: 0 8px;
+  }
+}

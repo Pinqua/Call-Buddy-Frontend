@@ -1,0 +1,109 @@
+.room {
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  cursor: pointer;
+}
+
+.room__box {
+  width: 100%;
+  height: 100%;
+}
+.room__options {
+  position: fixed;
+  bottom: 60px;
+  transition: all 0.4s;
+  cursor: pointer;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.room__optionsContainer {
+  display: flex;
+}
+.room__icon {
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #5277f0;
+  transition: all 0.15s;
+}
+.chatIcon {
+  position: relative;
+}
+
+.room .room__userVideo {
+  position: fixed;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  border-radius: 5px;
+  width: 220px;
+  height: 120px;
+  overflow: hidden;
+  border: solid 0.2px #a0a0a026;
+}
+.room__options .room__optionsContainer .chatIcon .chat__notify {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  color: red;
+  font-size: 1.4rem;
+}
+.room__icon:hover {
+  background-color: #345de2;
+}
+
+.room__optionsContainer .MuiSvgIcon-root {
+  font-size: 2rem;
+  color: white;
+}
+.room__optionsContainer .endCall .MuiSvgIcon-root {
+  color: red;
+}
+.room__optionsContainer .endCall:hover {
+  background-color: #f7f7f7;
+}
+.room__optionsContainer .endCall {
+  background-color: white;
+}
+
+.room .hide {
+  bottom: -100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .room__icon {
+    width: 58px;
+    height: 58px;
+    margin: 8px;
+  }
+  .room__optionsContainer .MuiSvgIcon-root {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .room__icon {
+    width: 50px;
+    height: 50px;
+    margin: 6px;
+  }
+  .room__optionsContainer .MuiSvgIcon-root {
+    font-size: 1.56rem;
+  }
+  .room .room__userVideo {
+    width: 180px;
+    height: 95px;
+  }
+  .room__options .room__optionsContainer .chatIcon .chat__notify {
+    font-size: 1.2rem;
+    right: 5px;
+  }
+}
