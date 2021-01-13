@@ -50,6 +50,17 @@
   overflow: hidden;
   border: solid 0.2px #a0a0a026;
 }
+
+.room .volumeOff__icon {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 999;
+  background-color: #00000036;
+}
+.room .volumeOff__icon:hover {
+  background-color: #00000046;
+}
 .room__options .room__optionsContainer .chatIcon .chat__notify {
   position: absolute;
   top: 5px;

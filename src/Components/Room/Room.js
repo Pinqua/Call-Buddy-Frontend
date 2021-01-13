@@ -58,10 +58,18 @@ function Room({
 
   //show icon only in mobile
   useEffect(() => {
-    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile) {
-      setSwitchIcon(true);
-    }
+    //no of cameras in a device.
+    let cameras = 0;
+    navigator.mediaDevices.enumerateDevices().then((devices) => {
+      devices.forEach((device) => {
+        if (device.kind === "videoinput") {
+          cameras++;
+        }
+        if (cameras > 1) {
+          setSwitchIcon(true);
+        }
+      });
+    });
   }, []);
 
   return (
@@ -98,16 +106,15 @@ function Room({
           <div className="room__icon endCall" onClick={endCall}>
             <CallEnd />
           </div>
-          {!switchIcon && (
-            <div
-              className="room__icon"
-              onClick={() => {
-                setVolumeOff(!volumeOff);
-              }}
-            >
-              {volumeOff ? <VolumeOff /> : <VolumeUp />}
-            </div>
-          )}
+          <div
+            className={`room__icon ${switchCamera ? "volumeOff__icon" : ""}`}
+            onClick={() => {
+              setVolumeOff(!volumeOff);
+            }}
+          >
+            {volumeOff ? <VolumeOff /> : <VolumeUp />}
+          </div>
+
           {switchIcon && (
             <div
               className="room__icon switch__camera__mobile"
