@@ -107,7 +107,7 @@ function Room({
             <CallEnd />
           </div>
           <div
-            className={`room__icon ${switchCamera ? "volumeOff__icon" : ""}`}
+            className={`room__icon ${switchIcon ? "volumeOff__icon" : ""}`}
             onClick={() => {
               setVolumeOff(!volumeOff);
             }}
