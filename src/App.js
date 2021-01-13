@@ -345,6 +345,15 @@ function App() {
     };
   }, []);
 
+  //to stop echo and mute my audio
+  useEffect(() => {
+    if (myInfo.stream && myInfo.stream.getAudioTracks().length > 0) {
+      myInfo.stream.getAudioTracks().forEach((track) => {
+        track.enabled = false;
+      });
+    }
+  }, [myInfo.stream]);
+
   return (
     <div className="app">
       <Router basename={process.env.PUBLIC_URL}>
