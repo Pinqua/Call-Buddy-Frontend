@@ -43,15 +43,19 @@ function Video({
         });
       }
     }
+    if (volumeOff) {
+      Video.current.volume = 0.0;
+      Video.current.muted = true;
+    } else {
+      Video.current.volume = 1.0;
+      Video.current.muted = false;
+    }
     Video.current.srcObject = stream;
     const playVideo = () => {
       Video.current.play();
-      if (volumeOff) {
-        Video.current.volume = 0.0;
-        Video.current.muted = true;
-      }
     };
     Video.current.addEventListener("loadedmetadata", playVideo);
+
     const VideoElement = Video.current;
     return () => {
       VideoElement.removeEventListener("loadedmetadata", playVideo);
