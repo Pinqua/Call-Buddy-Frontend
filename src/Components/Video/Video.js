@@ -1,6 +1,7 @@
 import { MicOff, VideocamOff } from "@material-ui/icons";
 import React, { useEffect, useRef } from "react";
 import "./Video.css";
+import { truncate } from "../../Utils/truncate";
 
 function Video({
   stream,
@@ -14,10 +15,6 @@ function Video({
   addStyle,
 }) {
   const Video = useRef();
-
-  function truncate(str, n) {
-    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
-  }
 
   useEffect(() => {
     if (videoCamOff) {
@@ -68,7 +65,9 @@ function Video({
         ref={Video}
         muted={volumeOff}
       ></video>
-      {videoCamOff && <div className="video__stopped"> </div>}
+      {videoCamOff && (
+        <div className="video__stopped">{you && <VideocamOff />}</div>
+      )}
       {userName && (
         <div className="video__user">
           {!you && (

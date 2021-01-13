@@ -115,6 +115,7 @@ function App() {
     });
   }, [userInfo.id]);
 
+  //automatically hide notification message after some time.
   useEffect(() => {
     let timeOut = null;
     if (notificationMsg) {
@@ -127,6 +128,7 @@ function App() {
     };
   }, [notificationMsg]);
 
+  //automatically cut the call after some time.
   useEffect(() => {
     let timeout = null;
     if (outgoingCall) {
@@ -383,6 +385,3 @@ function App() {
 }
 
 export default App;
-
-//https://www.openode.io/
-//https://medium.com/knoldus/how-to-remove-video-audio-tracks-from-mediastream-in-webrtc-22bd1542e947#:~:text=To%20remove%20video%20track%20%3A&text=1.,display%20%3A%20none%20for%20video%20element.&text=2.,of%20video%20element%20to%20empty.

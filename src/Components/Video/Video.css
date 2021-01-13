@@ -25,7 +25,10 @@ video {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: black;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .video__user {
@@ -40,6 +43,7 @@ video {
   z-index: 1;
   align-items: center;
   max-width: 90%;
+  border: solid 0.2px #a0a0a026;
 }
 .video__user .MuiSvgIcon-root {
   color: red;

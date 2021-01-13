@@ -29,12 +29,14 @@ function Room({
   const [hide, setHide] = useState(false);
   const [switchIcon, setSwitchIcon] = useState(false);
 
+  //show red dot on top of chat icon on receiving new messages
   const notifyHandler = useCallback(() => {
     if (!showChats) {
       setNotificationIndicator(true);
     }
   }, [showChats]);
 
+  //automatically hide icons after some time
   useEffect(() => {
     const show = () => {
       setHide((hide) => !hide);
@@ -54,6 +56,7 @@ function Room({
     };
   }, [hide]);
 
+  //show icon only in mobile
   useEffect(() => {
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile) {
@@ -129,9 +132,7 @@ function Room({
       </div>
       <Chats
         style={
-          showChats
-            ? { border: "solid 0.2px rgba(160, 160, 160, 0.15)" }
-            : { maxHeight: "0px" }
+          showChats ? { border: "solid 0.2px #a0a0a026" } : { maxHeight: "0px" }
         }
         displayName={myInfo.displayName}
         userID={userInfo.id}

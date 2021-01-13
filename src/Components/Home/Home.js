@@ -40,11 +40,13 @@ function Home({
     setInputUserID("");
   };
 
+  //user display name
   const DisplayNameHandler = (e) => {
     e.preventDefault();
     displayNameHandler(inputDisplayName);
   };
 
+  //copy text to clipboard
   const copyToClipboard = () => {
     const str = itemToCopy.current.innerText;
     const el = document.createElement("textarea");

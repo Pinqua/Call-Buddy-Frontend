@@ -26,10 +26,11 @@ function Chats({
       msg: msg,
       time: moment().format("LLL"),
     };
+    //send msg
     socket.current.emit("chat-message", new_msg, userID);
     setChats((chats) => [...chats, new_msg]);
     setMsg("");
-
+    //scroll to bottom of chats
     chatsContainer.current.scrollTo(
       0,
       chatsContainer.current.scrollHeight - chatsContainer.current.clientHeight
@@ -41,6 +42,7 @@ function Chats({
     //socket.current = io("https://localhost:9000/chats");
     socket.current.on("connect", () => {
       socket.current.emit("join-chat", myID);
+      //received new chat messages
       socket.current.on("chat-msg", (msg) => {
         setChats((chats) => [...chats, msg]);
         notifyHandler();

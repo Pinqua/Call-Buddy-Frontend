@@ -8,6 +8,7 @@ import {
   Videocam,
   VideocamOff,
 } from "@material-ui/icons";
+import { truncate } from "../../Utils/truncate";
 
 function CallUI({
   displayName,
@@ -27,7 +28,7 @@ function CallUI({
       } callUI`}
     >
       <div className="call__user">
-        {displayName}
+        {truncate(displayName, 30)}
         <div className="call__userID">ID - {id}</div>
         <span className="call__info">{incoming ? "Incoming" : "Calling"}</span>
       </div>
@@ -54,6 +55,7 @@ function CallUI({
           </div>
         )}
       </div>
+      {/* music for incoming and outgoing calls */}
       <audio
         src={music}
         autoPlay
