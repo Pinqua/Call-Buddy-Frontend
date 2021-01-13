@@ -30,7 +30,7 @@ function Video({
         });
       }
     }
-    if (micOff || volumeOff) {
+    if (micOff) {
       if (stream && stream.getAudioTracks().length > 0) {
         stream.getAudioTracks().forEach((track) => {
           track.enabled = false;
