@@ -47,6 +47,7 @@ function Video({
     const playVideo = () => {
       Video.current.play();
       if (volumeOff) {
+        Video.current.volume = 0.0;
         Video.current.muted = true;
       }
     };
@@ -63,7 +64,6 @@ function Video({
         style={addStyle}
         autoPlay
         ref={Video}
-        muted={volumeOff}
       ></video>
       {videoCamOff && (
         <div className="video__stopped">{you && <VideocamOff />}</div>
