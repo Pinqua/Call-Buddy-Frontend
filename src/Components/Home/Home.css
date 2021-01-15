@@ -130,7 +130,7 @@
 }
 .home__share {
   display: flex;
-  margin: 10px 0;
+  margin-top: 10px;
   align-items: center;
 }
 
