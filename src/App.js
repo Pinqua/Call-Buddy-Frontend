@@ -177,10 +177,12 @@ function App() {
           aspectRatio: { ideal: 1.7777777778 },
         },
         audio: {
-          sampleSize: 16,
-          channelCount: 2,
+          sampleRate: { ideal: 48000 },
+          sampleSize: { ideal: 16 },
+          channelCount: { ideal: 2, min: 1 },
           echoCancellation: true,
           noiseSuppression: true,
+          autoGainControl: true,
         },
       })
       .then((stream) => {
@@ -321,8 +323,12 @@ function App() {
               aspectRatio: { ideal: 1.7777777778 },
             },
             audio: {
+              sampleRate: { ideal: 48000 },
+              sampleSize: { ideal: 16 },
+              channelCount: { ideal: 2, min: 1 },
               echoCancellation: true,
               noiseSuppression: true,
+              autoGainControl: true,
             },
           })
           .then((stream) => {
