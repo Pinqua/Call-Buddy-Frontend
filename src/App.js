@@ -86,7 +86,7 @@ function App() {
       );
     }
     setMyInfo((myInfo) => ({ ...myInfo, videoCamOff: !myInfo.videoCamOff }));
-  }, [myInfo, userInfo]);
+  }, [myInfo, userInfo.id, userInfo.stream]);
 
   const micOffHandler = useCallback(() => {
     if (userInfo.stream) {
@@ -97,7 +97,7 @@ function App() {
       );
     }
     setMyInfo((myInfo) => ({ ...myInfo, micOff: !myInfo.micOff }));
-  }, [userInfo, myInfo]);
+  }, [userInfo.stream, userInfo.id, myInfo]);
 
   const switchCamera = useCallback(() => {
     const supported = navigator.mediaDevices.getSupportedConstraints();
@@ -321,8 +321,6 @@ function App() {
               aspectRatio: { ideal: 1.7777777778 },
             },
             audio: {
-              sampleSize: 16,
-              channelCount: 2,
               echoCancellation: true,
               noiseSuppression: true,
             },
