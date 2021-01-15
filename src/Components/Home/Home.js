@@ -15,6 +15,22 @@ import music from "../../Audio/music.mp3";
 import OutgoingMusic from "../../Audio/outgoing.mp3";
 import CallUI from "../CallUI/CallUI";
 import Loader from "react-loader-spinner";
+import {
+  EmailShareButton,
+  EmailIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  TelegramShareButton,
+  TelegramIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  FacebookMessengerShareButton,
+  FacebookMessengerIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share";
 
 function Home({
   callUser,
@@ -112,6 +128,50 @@ function Home({
                 <h3>My ID</h3>
                 <span ref={itemToCopy}>{myInfo.id}</span>
                 <FileCopy className="copyIcon" onClick={copyToClipboard} />
+                <div className="home__share">
+                  <WhatsappShareButton url={myInfo.id}>
+                    <WhatsappIcon
+                      size={"2rem"} // You can use rem value instead of numbers
+                      round
+                    />
+                  </WhatsappShareButton>
+                  <FacebookMessengerShareButton url={myInfo.id}>
+                    <FacebookMessengerIcon
+                      size={"2rem"} // You can use rem value instead of numbers
+                      round
+                    />
+                  </FacebookMessengerShareButton>
+                  <TelegramShareButton url={myInfo.id}>
+                    <TelegramIcon
+                      size={"2rem"} // You can use rem value instead of numbers
+                      round
+                    />
+                  </TelegramShareButton>
+                  <EmailShareButton url={myInfo.id}>
+                    <EmailIcon
+                      size={"2rem"} // You can use rem value instead of numbers
+                      round
+                    />
+                  </EmailShareButton>
+                  <LinkedinShareButton url={myInfo.id}>
+                    <LinkedinIcon
+                      size={"2rem"} // You can use rem value instead of numbers
+                      round
+                    />
+                  </LinkedinShareButton>
+                  <FacebookShareButton url={myInfo.id}>
+                    <FacebookIcon
+                      size={"2rem"} // You can use rem value instead of numbers
+                      round
+                    />
+                  </FacebookShareButton>
+                  <TwitterShareButton url={myInfo.id}>
+                    <TwitterIcon
+                      size={"2rem"} // You can use rem value instead of numbers
+                      round
+                    />
+                  </TwitterShareButton>
+                </div>
               </>
             ) : (
               <>

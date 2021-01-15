@@ -128,6 +128,11 @@
 .video__box .home__callOption > .MuiSvgIcon-root {
   color: white;
 }
+.home__share {
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+}
 
 .home .video__box {
   position: relative;

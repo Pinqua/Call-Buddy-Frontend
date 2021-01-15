@@ -25,10 +25,7 @@ video {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #111;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: black;
 }
 
 .video__user {

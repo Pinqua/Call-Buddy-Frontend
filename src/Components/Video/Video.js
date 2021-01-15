@@ -69,9 +69,7 @@ function Video({
         autoPlay
         ref={Video}
       ></video>
-      {videoCamOff && (
-        <div className="video__stopped">{you && <VideocamOff />}</div>
-      )}
+      {videoCamOff && <div className="video__stopped"></div>}
       {userName && (
         <div className="video__user">
           {!you && (
