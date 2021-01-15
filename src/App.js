@@ -182,7 +182,7 @@ function App() {
           channelCount: { ideal: 2, min: 1 },
           echoCancellation: true,
           noiseSuppression: true,
-          autoGainControl: true,
+          //autoGainControl: true,
         },
       })
       .then((stream) => {
@@ -328,7 +328,7 @@ function App() {
               channelCount: { ideal: 2, min: 1 },
               echoCancellation: true,
               noiseSuppression: true,
-              autoGainControl: true,
+              //  autoGainControl: true,
             },
           })
           .then((stream) => {
