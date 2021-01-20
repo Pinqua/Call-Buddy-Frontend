@@ -138,7 +138,7 @@ function Room({
         </div>
       </div>
       <Chats
-        style={
+        addStyle={
           showChats ? { border: "solid 0.2px #a0a0a026" } : { maxHeight: "0px" }
         }
         displayName={myInfo.displayName}

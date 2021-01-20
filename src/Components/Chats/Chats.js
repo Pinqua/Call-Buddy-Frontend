@@ -7,7 +7,7 @@ import moment from "moment";
 
 function Chats({
   chatsHandler,
-  style,
+  addStyle,
   userID,
   myID,
   notifyHandler,
@@ -66,7 +66,7 @@ function Chats({
   }, [myID, notifyHandler]);
 
   return (
-    <div className="chats__container" style={style}>
+    <div className="chats__container" style={addStyle}>
       <div className="chats__top">
         Chats
         <Close onClick={chatsHandler} className="chats__close" />
