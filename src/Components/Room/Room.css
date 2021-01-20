@@ -100,18 +100,37 @@
     font-size: 1.8rem;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
+  .room__icon {
+    width: 55px;
+    height: 55px;
+    margin: 7px;
+  }
+  .room__optionsContainer .MuiSvgIcon-root {
+    font-size: 1.7rem;
+  }
+  .room .room__userVideo {
+    width: 185px;
+    height: 100px;
+  }
+  .room__options .room__optionsContainer .chatIcon .chat__notify {
+    font-size: 1.4rem;
+    right: 7px;
+  }
+}
+
+@media screen and (max-width: 350px) {
   .room__icon {
     width: 50px;
     height: 50px;
     margin: 6px;
   }
-  .room__optionsContainer .MuiSvgIcon-root {
-    font-size: 1.56rem;
-  }
   .room .room__userVideo {
     width: 180px;
     height: 95px;
+  }
+  .room__optionsContainer .MuiSvgIcon-root {
+    font-size: 1.6rem;
   }
   .room__options .room__optionsContainer .chatIcon .chat__notify {
     font-size: 1.2rem;
