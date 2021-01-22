@@ -38,7 +38,7 @@ function Chats({
   };
 
   useEffect(() => {
-    socket.current = io("https://call-buddy.herokuapp.com/chats");
+    socket.current = io(`${process.env.REACT_APP_SERVER_URL}/chats`);
     //socket.current = io("https://localhost:9000/chats");
     socket.current.on("connect", () => {
       socket.current.emit("join-chat", myID);

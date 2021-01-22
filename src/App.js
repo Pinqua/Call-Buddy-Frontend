@@ -147,7 +147,7 @@ function App() {
   }, [outgoingCall, rejectCall]);
 
   useEffect(() => {
-    socket.current = io("https://call-buddy.herokuapp.com/media");
+    socket.current = io(`${process.env.REACT_APP_SERVER_URL}/media`);
     //socket.current = io("http://localhost:9000/media");
 
     let Stream;
