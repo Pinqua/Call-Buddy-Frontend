@@ -29,10 +29,13 @@ function App() {
   });
   const myPeer = useRef(
     new Peer(
-      /*undefined, { host: "localhost", port: 5000, path: "/myapp" }*/ {
-        host: "https://peerjs-server-call-buddy.herokuapp.com/",
-        port: 11319,
+      /*undefined, { host: "localhost", port: 5000, path: "/myapp" }*/
+      undefined,
+      {
+        host: `${process.env.REACT_APP_PEERJS_HOST}`,
+        port: 443,
         path: "/",
+        secure: true,
       }
     )
   );
