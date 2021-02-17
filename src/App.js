@@ -28,7 +28,13 @@ function App() {
     micOff: false,
   });
   const myPeer = useRef(
-    new Peer(/*undefined, { host: "localhost", port: 5000, path: "/myapp" }*/)
+    new Peer(
+      /*undefined, { host: "localhost", port: 5000, path: "/myapp" }*/ {
+        host: "https://peerjs-server-call-buddy.herokuapp.com/",
+        port: 11319,
+        path: "/",
+      }
+    )
   );
 
   const answerCall = useCallback(() => {
