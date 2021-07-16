@@ -27,7 +27,7 @@ https://call-buddy-piyush-sati.netlify.app
 - No sign up and sign in needed
 - Fully Responsive (android +desktop)
 - Real time oncall chat functionality
-- All basic functionalities included like mute and unmute mic,videocam on and off, end call
+- All basic functionalities included like mute and unmute mic, videocam on and off, end call
 
 
 ## Environment Variables
