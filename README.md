@@ -28,6 +28,8 @@ https://call-buddy-piyush-sati.netlify.app
 - Fully Responsive (android +desktop).
 - Real time oncall chat functionality.
 - All basic functionalities included like mute and unmute mic,videocam on and off, end call.
+
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
