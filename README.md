@@ -8,12 +8,12 @@ Video calling web app build using react.js, socket.io and peer.js .
 
  - [Backend Code](https://github.com/Pinqua/Call-Buddy-Backend)
  
-![Logo](https://call-buddy-piyush-sati.netlify.app/static/media/logo.1b0797ca.png)
+![Logo](https://call-buddy-piyush-sati.vercel.app/static/media/logo.1b0797ca.png)
 
     
 ## Demo
 
-https://call-buddy-piyush-sati.netlify.app
+https://call-buddy-piyush-sati.vercel.app
 
   
 ## Screenshots
