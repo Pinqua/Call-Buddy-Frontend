@@ -26,7 +26,7 @@ https://call-buddy.vercel.app
 - Progressive Web App (PWA)
 - No sign up and sign in needed
 - Fully Responsive (android +desktop)
-- Real time oncall chat functionality
+- Instant messaging
 - All basic functionalities included like mute and unmute mic, video on and off, end call
 
 
