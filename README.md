@@ -2,7 +2,7 @@
 
 # Call Buddy - Frontend
 
-Video Chat webapp built using React.js, Socket.io and Peer.js .
+Video Chat webapp built using React.js, Socket.io and Peer.js
 
 
 
