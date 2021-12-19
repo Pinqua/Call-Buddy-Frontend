@@ -2,7 +2,7 @@
 
 # Call Buddy - Frontend
 
-Video calling web app build using react.js, socket.io and peer.js .
+Video calling web app built using react.js, socket.io and peer.js .
 
 
 
