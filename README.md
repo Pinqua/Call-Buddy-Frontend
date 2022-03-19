@@ -36,9 +36,9 @@ To run this project, you will need to add the following environment variables to
 
 
 
-`REACT_APP_SERVER_URL=server url`
+`REACT_APP_SERVER_URL=server url (wherever your backend code is hosted add its url over here)`
 
-`REACT_APP_PEERJS_HOST=peerjs hosted server url`
+`REACT_APP_PEERJS_HOST=peerjs hosted server url (add url of host or already hosted peerjs server over here. You can use heroku for this) `
 
 `GENERATE_SOURCEMAP=false`
 
