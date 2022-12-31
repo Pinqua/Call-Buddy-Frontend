@@ -71,9 +71,7 @@ Create a **.env** file inside project directory with fields given below.
 
 ```
   REACT_APP_SERVER_URL= add server url (wherever your backend code is hosted add its url over here)
-
   REACT_APP_PEERJS_HOST= add peerjs hosted server url
-
   GENERATE_SOURCEMAP=false
 ```
 
