@@ -45,14 +45,6 @@ https://call-buddy.vercel.app
 - All basic functionalities included like mute and unmute mic, video on and off, end call
 
 
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-
-
-
-
 
 
 ## Run Locally
@@ -75,12 +67,12 @@ Install dependencies
   npm install
 ```
 
-Create a **.env.local** file inside project directory with fields given below.
+Create a **.env** file inside project directory with fields given below.
 
 ```
- REACT_APP_SERVER_URL=server url (wherever your backend code is hosted add its url over here)
+ REACT_APP_SERVER_URL=add server url (wherever your backend code is hosted add its url over here)
 
- REACT_APP_PEERJS_HOST=peerjs hosted server url
+ REACT_APP_PEERJS_HOST=add peerjs hosted server url
 
  GENERATE_SOURCEMAP=false
 ```
