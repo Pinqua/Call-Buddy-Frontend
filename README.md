@@ -1,3 +1,19 @@
+<div align="left">
+            <a href="https://paypal.me/piyushsati311999" target="_blank" style="display: inline-block;">
+                <img
+                    src="https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square&logo=paypal" 
+                    align="left"
+                />
+            </a>
+            <a href="https://www.buymeacoffee.com/piyushsati" target="_blank" style="display: inline-block;">
+                <img
+                    src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=flat-square&logo=buymeacoffee" 
+                    align="left"
+                />
+            </a>
+</div>  
+<br/>  
+
 
 # Call Buddy - Frontend
 
@@ -35,11 +51,7 @@ To run this project, you will need to add the following environment variables to
 
 
 
-`REACT_APP_SERVER_URL=server url (wherever your backend code is hosted add its url over here)`
 
-`REACT_APP_PEERJS_HOST=peerjs hosted server url`
-
-`GENERATE_SOURCEMAP=false`
 
 
 
@@ -63,6 +75,16 @@ Install dependencies
   npm install
 ```
 
+Create a **.env.local** file inside project directory with fields given below.
+
+```
+ REACT_APP_SERVER_URL=server url (wherever your backend code is hosted add its url over here)
+
+ REACT_APP_PEERJS_HOST=peerjs hosted server url
+
+ GENERATE_SOURCEMAP=false
+```
+
 Start the server
 
 ```bash
@@ -78,4 +100,9 @@ Contributions are always welcome!
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
+  
+<br/>
+<br/>
+
+<p align="center">If you liked the repository, show your  ❤️  by starring and forking it.</p>
   
